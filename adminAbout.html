@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/userProfile.css">
+    <link rel="stylesheet" href="./css/adminDash.css">
+    <link rel="icon" href="./img/image (5).png">
+    <title>Admin Dashboard</title>
+    <style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin-left: 20px; 
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .dropdown a {
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: #333;
+        transition: background-color 0.3s ease;
+    }
+    .dropdown a:hover {
+        background-color: #f0f0f0;
+    }
+    .settings-icon {
+        display: block;
+    }
+    .notification {
+        display: block;
+        position: relative;
+    }
+    .num {
+        background-color: #f5576c;
+        color: #fff;
+        padding: 3px 6px;
+        border-radius: 50%;
+        font-size: 12px;
+        position: absolute;
+        top: -8px;
+        right: -8px;
+    }
+    .profile {
+        display: block;
+        position: relative;
+        cursor: pointer;
+    }
+    .profile img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    .profile .dropdown-content {
+        width: 200px; 
+    }      
+    </style>
+    
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+        <a href="./adminDash.html" class="brand">
+            <i class='bx bx-home-smile'></i>
+            <span class="text">Barangay Connect</span>
+        </a>
+        <ul class="side-menu top">
+            <li class="active">
+                <a href="./adminDash.html">
+                <i class='bx bxs-dashboard' ></i>
+                <span class="text">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="secretary.html">
+                <i class='bx bxs-doughnut-chart' ></i>
+                <span class="text">Manage Secretary</span>
+                </a>
+            </li>
+            <li>
+                <a href="./resident.html">
+                <i class='bx bxs-shopping-bag-alt' ></i>
+                <span class="text">Manage Residents</span>
+                </a>
+            </li>
+            <li>
+                <a href="servicesAdmin.html">
+                <i class='bx bxs-doughnut-chart' ></i>
+                <span class="text">Manage Services</span>
+                </a>
+                </li>
+            <li>
+                <a href="transaction.html">
+                <i class='bx bxs-message-dots' ></i>
+                <span class="text">View Transactions</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav>
+            <i class='bx bx-menu' ></i>
+            <a href="#" class="nav-link">Categories</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Search...">
+                    <button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+                </div>
+            </form>
+            <div class="dropdown">
+                <a href="#" class="settings-icon">
+                    <i class='bx bx-cog' ></i> <!-- Settings Icon -->
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">Settings 1</a>
+                    <a href="#">Settings 2</a>
+                    <a href="#">Settings 3</a>
+                </div>
+            </div>
+            <input type="checkbox" id="switch-mode" hidden>
+            <label for="switch-mode" class="switch-mode"></label>
+            <a href="#" class="notification">
+                <i class='bx bxs-bell'></i>
+                <span class="num">8</span>
+                <div class="dropdown-content notification-dropdown">
+                    <a href="#">Notification 1</a>
+                    <a href="#">Notification 2</a>
+                    <a href="#">Notification 3</a>
+                </div>
+            </a>
+            <a href="./adminProfile.html" class="profile">
+                <img src="./img/image (5).png">
+            </a>
+            <div class="dropdown-content profile-dropdown">
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>
+            </div>
+        </nav>
+        <!-- NAVBAR -->
+    <!-- CONTENT -->
+    <main>
+        <div class="container">
+            <div class="img" style="background-image: linear-gradient(150deg, rgba(63, 174, 255, .3)15%, rgba(63, 174, 255, .3)70%, rgba(63, 174, 255, .3)94%), url(http://cavitecity.gov.ph/images/barangay.png);height: 350px;background-size: cover;"></div>
+            <div class="card social-prof">
+                <div class="card-body">
+                    <div class="wrapper">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="" class="user-profile">
+                        <h3>Almar Gutierrez</h3>
+                        <p>Barangay Captain</p>
+                    </div>
+                    <div class="row ">
+                        <div class="col-lg-12">
+                            <ul class=" nav nav-tabs justify-content-center s-nav">
+                                <li><a href="./adminProfile.html">Timeline</a></li>
+                                <li><a class="active"  href="./adminAbout.html">About</a></li>
+                                <li><a href="./adminOfficials.html">Officials</a></li>
+                                <li><a href="#">Residents</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Info -->
+            <div class="card mb-4" style="padding: 10px; border: 1px solid #ccc;">
+                <h2 style="background-color: #1074e6; font-size: 15px; color: white;padding: 10px; font-family: 'Poppins'; border: none;border-radius: 15px; ">Personal Details</h2>
+                <div class="card-body">
+                  <div class="row mb-2">
+                    <div class="col-md-3 text-muted">Admin ID:</div>
+                    <div class="col-md-9">
+                    11OA
+                    </div>
+                   </div>
+
+                  <div class="row mb-2">
+                    <div class="col-md-3 text-muted">Full Name:</div>
+                    <div class="col-md-9">
+                      May 3, 1995
+                    </div>
+                  </div>
+
+                  <div class="row mb-2">
+                    <div class="col-md-3 text-muted">Password:</div>
+                    <div class="col-md-9">
+                      ******
+                    </div>
+                  </div>
+
+                  <div class="row mb-2">
+                    <div class="col-md-3 text-muted">Address:</div>
+                    <div class="col-md-9">
+                      <a href="javascript:void(0)" class="text-body">Nabunturan, Barili Cebu</a>
+                    </div>
+                  </div>
+
+                  <div class="row mb-2">
+                    <div class="col-md-3 text-muted">Date of Birth:</div>
+                    <div class="col-md-9">
+                      <a href="javascript:void(0)" class="text-body">December 25, 2023</a>
+                    </div>
+                  </div>
+
+                  <div class="row mb-2">
+                    <div class="col-md-3 text-muted">Place of Birth:</div>
+                    <div class="col-md-9">
+                      <a href="javascript:void(0)" class="text-body">Barili, Cebu</a>
+                    </div>
+                  </div>
+
+                  <h6 class="my-3">Contacts</h6>
+
+                  <div class="row mb-2">
+                    <div class="col-md-3 text-muted">Email:</div>
+                    <div class="col-md-9">
+                      almar.gutierez123@gmail.com
+                    </div>
+                  </div>
+
+                  <div class="row mb-2">
+                    <div class="col-md-3 text-muted">Phone:</div>
+                    <div class="col-md-9">
+                      +0 (123) 456 7891
+                    </div>
+                  </div>
+
+                  <h6 class="my-3">Education:</h6>
+
+                  <div class="row mb-2">
+                    <div class="col-md-3 text-muted">University:</div>
+                    <div class="col-md-9">
+                      <a href="javascript:void(0)" class="text-body">University of San Carlos</a>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-3 text-muted">Degree:</div>
+                    <div class="col-md-9">
+                      <a href="javascript:void(0)" class="text-body">Barangay Captain</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="button-container" style="display: flex;justify-content: space-between;margin-top: 10px;">
+                    <div class="col-md-3" style="display: inline-block; margin-left: 40px;">
+                        <a href="./adminProfile.html" class="btn btn-primary">Cancel</a>
+                    </div>
+                    <div class="col-md-3" style="display: inline-block;">
+                        <a href="./addAdmin.html" class="btn btn-primary">Update</a>
+                    </div>
+                </div>
+            </div>
+            <!-- / Info -->
+
+
+            <script src="./js/adminDash.js"></script>
+    </html>
+</body>
