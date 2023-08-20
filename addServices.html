@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident</title>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/adminDash.css">
+    <link rel="icon" href="./img/image (5).png">
+	<style>
+		.form-control-textarea {
+    	resize: vertical; /* Allow vertical resizing */
+		}
+	</style>
+</head>	
+<body>
+    <!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="adminDash.html" class="brand">
+			<i class='bx bx-home-smile'></i>
+			<span class="text">Barangay Connect</span>
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="adminDash.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+            <li>
+				<a href="secretary.html">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Manage Secretary</span>
+				</a>
+			</li>
+			<li>
+				<a href="./resident.html">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Manage Residents</span>
+				</a>
+			</li>
+			<li  class="active">
+				<a href="servicesAdmin.html">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Manage Services</span>
+				</a>
+			</li>
+			<li>
+				<a href="transaction.html">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">View Transactions</span>
+				</a>
+			</li>
+		</ul>
+
+	</section>
+	<!-- SIDEBAR -->
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<div class="dropdown">
+				<a href="#" class="settings-icon">
+					<i class='bx bx-cog' ></i> <!-- Settings Icon -->
+				</a>
+				<div class="dropdown-content">
+					<a href="#">Settings 1</a>
+					<a href="#">Settings 2</a>
+					<a href="#">Settings 3</a>
+				</div>
+			</div>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell'></i>
+				<span class="num">8</span>
+				<div class="dropdown-content notification-dropdown">
+					<a href="#">Notification 1</a>
+					<a href="#">Notification 2</a>
+					<a href="#">Notification 3</a>
+				</div>
+			</a>
+			<a href="#" class="profile">
+				<img src="img/people.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+		
+		<br>
+		<form style="margin-left: 20px;margin-right: 20px;" class="row g-3">
+			<h2 style="background-color: #1074e6; font-size: 15px; color: white;padding: 10px; font-family: 'Poppins'; border: none;border-radius: 15px; ">Personal Details</h2>
+			<div class="col-md-6">
+			  <label for="firstname" class="form-label">Service Name:</label>
+			  <input type="text" class="form-control" id="firstname" required>
+			</div>
+			<div class="col-md-6">
+				<label for="Photo" class="form-label">Photo:</label>
+				<input type="file" class="form-control" id="Photo" required>
+			</div>
+			<div class="col-md-12">
+				<label for="serviceDescription" class="form-label">Service Description:</label>
+				<textarea class="form-control" id="serviceDescription" rows="5" required></textarea>
+			</div>
+			<div style="margin-left: 35%;margin-bottom: 2px;" class="col-md-2">
+				<a href="./servicesAdmin.html" class="btn btn-primary">Cancel</a>
+			</div>
+			<div style="margin-bottom: 2px;" class="col-md-2">
+				<a href="./adminDash.html" class="btn btn-primary">Update</a>
+			</div>
+		</form>
+
+        <script src="./js/adminDash.js"></script>
+
+</body>
+</html>

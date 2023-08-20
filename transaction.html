@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction-Dash</title>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/adminDash.css">
+	<link rel="stylesheet" href="./css/sample.css">
+    <link rel="icon" href="./img/image (5).png">
+	<style>
+		.dropdown {
+			position: relative;
+			display: inline-block;
+			margin-left: 20px; 
+		}
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			z-index: 1;
+		}
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+		.dropdown a {
+			display: block;
+			padding: 10px 15px;
+			text-decoration: none;
+			color: #333;
+			transition: background-color 0.3s ease;
+		}
+		.dropdown a:hover {
+			background-color: #f0f0f0;
+		}
+		.settings-icon {
+			display: block;
+		}
+		.notification {
+			display: block;
+			position: relative;
+		}
+		.num {
+			background-color: #f5576c;
+			color: #fff;
+			padding: 3px 6px;
+			border-radius: 50%;
+			font-size: 12px;
+			position: absolute;
+			top: -8px;
+			right: -8px;
+		}
+		.profile {
+			display: block;
+			position: relative;
+			cursor: pointer;
+		}
+		.profile img {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+		}
+		.profile .dropdown-content {
+			width: 200px; 
+		}      
+	</style>
+</head>
+<body>
+    <!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="./index.html" class="brand">
+			<i class='bx bx-home-smile'></i>
+			<span class="text">Barangay Connect</span>
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="adminDash.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+            <li>
+				<a href="secretary.html">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Manage Secretary</span>
+				</a>
+			</li>
+			<li>
+				<a href="./resident.html">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Manage Residents</span>
+				</a>
+			</li>
+			<li>
+				<a href="servicesAdmin.html">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Manage Services</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="transaction.html">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">View Transactions</span>
+				</a>
+			</li>
+		</ul>
+
+	</section>
+	<!-- SIDEBAR -->
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<div class="dropdown">
+				<a href="#" class="settings-icon">
+					<i class='bx bx-cog' ></i> <!-- Settings Icon -->
+				</a>
+				<div class="dropdown-content">
+					<a href="#">Settings 1</a>
+					<a href="#">Settings 2</a>
+					<a href="#">Settings 3</a>
+				</div>
+			</div>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell'></i>
+				<span class="num">8</span>
+				<div class="dropdown-content notification-dropdown">
+					<a href="#">Notification 1</a>
+					<a href="#">Notification 2</a>
+					<a href="#">Notification 3</a>
+				</div>
+			</a>
+			<a href="#" class="profile">
+				<img src="./img/image (5).png">
+			</a>
+			<div class="dropdown-content profile-dropdown">
+				<a href="#">Profile</a>
+				<a href="#">Settings</a>
+				<a href="#">Logout</a>
+			</div>
+		</nav>
+		<!-- NAVBAR -->
+		
+		<section class="main">
+			<div class="main-top">
+			  <h2>Transactions here..</h2>
+			  <i class="fas fa-user-cog"></i>
+			</div>
+			<div class="main-skills">
+			  <div class="card">
+				<i class="fas fa-laptop-code"></i>
+				<h3>Barangay ID</h3>
+				<p>Click the form below</p>
+				<button id="webDevBtn">Get Started</button>
+			  </div>
+			  <div class="card">
+				<i class="fab fa-wordpress"></i>
+				<h3>Indigency</h3>
+				<p>Click the form below</p>
+				<button id="wordpressBtn">Get Started</button>
+			  </div>
+			  <div class="card">
+				<i class="fas fa-palette"></i>
+				<h3>Certificate</h3>
+				<p>Click the form below</p>
+				<button id="graphicDesignBtn">Get Started</button>
+			  </div>
+			  <div class="card">
+				<i class="fab fa-app-store-ios"></i>
+				<h3>Business Permit</h3>
+				<p>Click the form below</p>
+				<button id="iosDevBtn">Get Started</button>
+			  </div>
+			</div>
+	  
+			<section class="main-course">
+			  <h3>List of Transactions</h3>
+			  <div class="course-box">
+				<ul>
+				  <li class="active">In progress</li>
+				  <li>Pending</li>
+				  <li>Process</li>
+				  <li>Claimed</li>
+				</ul>
+				<div class="course">
+					<div class="box">
+					  <h3>JAN-FEB</h3>
+					  <p>2023</p>
+					  <button style="margin-left: 63px;">View</button>
+					  <button class="btn-details">Edit</button>
+					  <i class="fab fa-html5 html"></i>
+					</div>
+					<div class="box">
+					  <h3>MAR-APR</h3>
+					  <p>2023</p>
+					  <button style="margin-left: 63px;">View</button>
+					  <button class="btn-details">Edit</button>
+					  <i class="fab fa-css3-alt css"></i>
+					</div>
+					<div class="box">
+					  <h3>MAY-JUN</h3>
+					  <p>2023</p>
+					  <button style="margin-left: 63px;">View</button>
+					  <button class="btn-details">Edit</button>
+					  <i class="fab fa-js-square js"></i>
+					</div>
+					<div class="box">
+					  <h3>JUL-AUG</h3>
+					  <p>2023</p>
+					  <button style="margin-left: 63px;">View</button>
+					  <button class="btn-details">Edit</button>
+					  <i class="fab fa-python python"></i>
+					</div>
+				</div> <br>
+				<div class="course">
+					<div class="box">
+					  <h3>JAN-FEB</h3>
+					  <p>2023</p>
+					  <button style="margin-left: 63px;">View</button>
+					  <button class="btn-details">Edit</button>
+					  <i class="fab fa-html5 html"></i>
+					</div>
+					<div class="box">
+					  <h3>MAR-APR</h3>
+					  <p>2023</p>
+					  <button style="margin-left: 63px;">View</button>
+					  <button class="btn-details">Edit</button>
+					  <i class="fab fa-css3-alt css"></i>
+					</div>
+					<div class="box">
+					  <h3>MAY-JUN</h3>
+					  <p>2023</p>
+					  <button style="margin-left: 63px;">View</button>
+					  <button class="btn-details">Edit</button>
+					  <i class="fab fa-js-square js"></i>
+					</div>
+					<div class="box">
+					  <h3>JUL-AUG</h3>
+					  <p>2023</p>
+					  <button style="margin-left: 63px;">View</button>
+					  <button class="btn-details">Edit</button>
+					  <i class="fab fa-python python"></i>
+					</div>
+				</div> <br>
+				<div style="margin-left: 60px;" class="pagination">
+					<a href="#">&laquo;</a>
+					<a href="#">1</a>
+					<a href="#" class="active">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">&raquo;</a>
+				</div>
+			  </div>
+			</section>
+		  </section>
+
+
+        <script src="./js/adminDash.js"></script>
+		<script>
+			
+			document.getElementById('webDevBtn').addEventListener('click', function() {
+			    window.location.href = 'adminDash.html';
+			});
+		  
+			document.getElementById('wordpressBtn').addEventListener('click', function() {
+				window.location.href = 'adminDash.html';
+			});
+		  
+			document.getElementById('graphicDesignBtn').addEventListener('click', function() {
+				window.location.href = 'adminDash.html';
+			});
+		  
+			document.getElementById('iosDevBtn').addEventListener('click', function() {
+				window.location.href = 'adminDash.html';
+			});
+		  </script>
+</body>
+</html>

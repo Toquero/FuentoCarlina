@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icons" href="./img/home2.jpg">
+</head>
+<body>
+    <section>
+        <div class="container">
+          <div class="user signinBx">
+            <div class="imgBx"><img src="./img/team-2.jpg" alt="" /></div>
+            <div class="formBx">
+              <form action="" onsubmit="return false;">
+                <h2>Sign In</h2>
+                <input type="text" name="" placeholder="Username" />
+                <input type="password" name="" placeholder="Password" />
+                <a href="./index.html">
+                    <input type="submit" class="bttn" value="login" ></input>
+                </a>
+                <!-- <div class="input-field button">
+                  <a href="../public/homepage.html"><input type="button" class="cancelbtn" value="Login"></a>
+              </div> -->
+              <!-- <button id="login-btn">Login</button> -->
+                <p class="signup">
+                  Don't have an account ?
+                  <a href="#" onclick="toggleForm();">Sign Up.</a>
+                </p>
+              </form>
+            </div>
+          </div>
+          <div class="user signupBx">
+            <div class="formBx">
+              <form action="" onsubmit="return false;">
+                <h2>Create an account</h2>
+                <input type="text" name="" placeholder="Username" />
+                <input type="email" name="" placeholder="Email Address" />
+                <input type="password" name="" placeholder="Create Password" />
+                <input type="password" name="" placeholder="Confirm Password" />
+                <!-- <input type="submit" name="" value="Sign Up" /> -->
+                <a href="#">
+                    <button class="bttn" role="button">Sign Up</button>
+                </a>
+                <p class="signup">
+                  Already have an account ?
+                  <a href="#" onclick="toggleForm();">Sign in.</a>
+                </p>
+              </form>
+            </div>
+            <div class="imgBx"><img src="./img/about-1.jpg" alt="" /></div>
+          </div>
+        </div>
+      </section>
+</body>
+
+<script src="js/login.js"></script>
+</html>
