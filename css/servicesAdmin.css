@@ -266,4 +266,30 @@
         background-color: #0056b3;
     }
 
+    /* Add hover effect to team cards */
+    .team-card {
+        position: relative;
+        transition: background-color 0.3s ease;
+    }
+
+    .team-card:hover {
+        background-color: #84b8f0;
+    }
+
+    /* Rest of your CSS styles for the team cards */
+    .team-card i {
+        /* Your icon styles */
+    }
+
+    .team-card h3 {
+        /* Your heading styles */
+    }
+
+    .team-card p {
+        /* Your paragraph styles */
+    }
+
+    .card-icons {
+        /* Your card icon styles */
+    }
     

@@ -66,4 +66,17 @@ switchMode.addEventListener('change', function () {
 	}
 })
 
+function showConfirmationPopup() {
+	var popup = document.getElementById("deletePopup");
+	popup.style.display = "flex";
+	}
+
+	function hideConfirmationPopup() {
+		var popup = document.getElementById("deletePopup");
+		popup.style.display = "none";
+	}
+	function deleteItem() {
+	// Replace this with your actual delete functionality
+	console.log("Item deleted!");
+	}
 
